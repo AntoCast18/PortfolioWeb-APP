@@ -1,5 +1,5 @@
 .row{
-    padding: 20px;
+    padding: 30px;
     }
 div{
     background-color: black;
@@ -24,6 +24,7 @@ div{
             box-shadow: 3px 3px 3px grey;
             left: 2%;
             top:-80px;
+            overflow: hidden;
         }
 }
 /*etiqueta nombre*/
