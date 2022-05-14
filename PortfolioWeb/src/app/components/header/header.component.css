@@ -1,7 +1,9 @@
 div{
     background-color: black;
+    margin: 2px;
+    padding: 0;
+    overflow-x: hidden; 
 }
-
 app-social{
     float: right;
     margin-top: 25px;
