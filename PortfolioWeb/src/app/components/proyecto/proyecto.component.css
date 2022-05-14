@@ -1,0 +1,15 @@
+.row{
+    background-color: black;
+    padding: 30px;
+}
+.contenedor{
+    width: auto;
+}
+.parte1, .parte2{
+    display: inline-block;
+    text-align: justify;
+}
+.img-proyecto{
+    box-shadow: 8px 8px 8px rgb(83, 82, 82);
+    box-shadow: ejeX ejeY difumacion color;
+}
