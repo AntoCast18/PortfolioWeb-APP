@@ -2,8 +2,14 @@
     padding: 20px;
 }
 div{
-    background-color: black;
+    background-color: rgb(16, 3, 48);
 }
 h1, h3{
     display: inline;
+}
+h1, p{
+    color: gray;
+}
+li{
+    color: gray;
 }

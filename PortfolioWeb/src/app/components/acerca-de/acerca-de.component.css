@@ -2,7 +2,7 @@
     padding: 20px;
     }
 div{
-    background-color: black;
+    background-color: lightyellow;
     text-align: center ;
 }
 /*foto perfil bootstrap*/
@@ -30,5 +30,13 @@ div{
 /*etiqueta nombre*/
 #nombre{
     font-weight: bold;
-    margin-top: 30%;    
+    margin-top: 20%;
+    font-size: 20px;    
 }
+
+h1{ 
+    font-weight: 400;
+}
+p{
+    font-weight: lighter;
+ }

@@ -1,4 +1,7 @@
 .row{
-    background-color: black;
+    background-color: black ;
     padding: 20px;
+}
+h1 { 
+    color: white;
 }
