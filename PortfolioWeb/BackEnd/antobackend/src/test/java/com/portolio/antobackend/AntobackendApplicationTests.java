@@ -1,10 +1,10 @@
-package com.portfolioanto.Anto;
+package com.portolio.antobackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AntoApplicationTests {
+class AntobackendApplicationTests {
 
 	@Test
 	void contextLoads() {

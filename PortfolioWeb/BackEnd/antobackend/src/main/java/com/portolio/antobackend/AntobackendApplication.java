@@ -1,13 +1,13 @@
-package com.portfolioanto.Anto;
+package com.portolio.antobackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AntoApplication {
+public class AntobackendApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AntoApplication.class, args);
+		SpringApplication.run(AntobackendApplication.class, args);
 	}
 
 }
