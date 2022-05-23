@@ -5,7 +5,6 @@ import com.portolio.antobackend.Entidad.Persona;
 import com.portolio.antobackend.Interfaces.IpersonaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,10 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class PersonaControler {
+public class PersonaController {
     @Autowired IpersonaService ipersonaService;
     
-    @GetMapping("peronas/traer")
+    @GetMapping("personas/traer")
     public List<Persona> getPersona(){
         return ipersonaService.getPersona();
     }
@@ -38,7 +37,7 @@ public class PersonaControler {
     }
     
     //URL: PUERTO/personas/editar/4/nombre & apellido & img
-    @PutMapping("/peronas/editar/{id}")
+    @PutMapping("/personas/editar/{id}")
     public Persona editPersona(@PathVariable Long id,
             @RequestParam("nombre")String nuevoNombre,
             @RequestParam("apellido")String nuevoApellido,
