@@ -2,8 +2,9 @@
     padding: 20px;
     }
 div{
-    background-color: lightyellow;
+    background-color: black;
     text-align: center ;
+    font-family: Monserrat;
 }
 /*foto perfil bootstrap*/
 @media(min-width: 576px){
@@ -36,7 +37,9 @@ div{
 
 h1{ 
     font-weight: 400;
+    color: #f9004d;
 }
 p{
     font-weight: lighter;
+    color: #fcfc;
  }
