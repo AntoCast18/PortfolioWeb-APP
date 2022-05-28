@@ -34,7 +34,7 @@ public class ProyectoControler {
         return " Proyecto fue creado exitosamente";
     }
     
-    @DeleteMapping("/Proyecto/borrar/{id}")
+    @DeleteMapping("/proyecto/borrar/{id}")
     public String deleteProyecto (@PathVariable Long id){
         proService.deleteProyecto(id);
         return "Proyecto fue eliminada exitosamente";
@@ -44,14 +44,14 @@ public class ProyectoControler {
     public Proyecto editProyecto(@PathVariable Long id,
             @RequestParam("nombre")String nuevoNombre,
             @RequestParam("descripcion")String nuevoDescripcion,
-            @RequestParam("data")String nuevoData,
+            @RequestParam("img")String nuevoImg,
             @RequestParam("url")String nuevoUrl){
         
         Proyecto proyecto = proService.findProyecto(id);
         
         proyecto.setNomProy(nuevoNombre);
         proyecto.setDescriptionProy(nuevoDescripcion);
-        proyecto.setDataProy(nuevoData);
+        proyecto.setImgProy(nuevoImg);
         proyecto.setUrlProject(nuevoUrl);
        
         proService.saveProyecto(proyecto);

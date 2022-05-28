@@ -28,10 +28,10 @@ public class EducacionControler {
         return eduService.getEducacion();
     }
     
-    @PostMapping("/educacion/add")
+    @PostMapping("/educacion/crear")
     public String createEducacion(@RequestBody Educacion educacion){
         eduService.saveEducacion(educacion);
-        return "La EEducacion fue creada exitosamente";
+        return "La Educacion fue creada exitosamente";
     }
     
     @DeleteMapping("/educacion/borrar/{id}")

@@ -22,8 +22,8 @@ public class Proyecto implements Serializable {
     @Size(min = 1, max = 50, message = "No cumple con la longitud")
     private String DescriptionProy;
     
-    @Size(min = 4, max = 4, message = "No cumple con la longitud")
-    private String DataProy;
+    @Size(min = 4, max = 100, message = "No cumple con la longitud")
+    private String ImgProy;
    
     @Size(min = 1, max = 100, message = "No cumple con la longitud")
     private String urlProject;
@@ -53,11 +53,11 @@ public class Proyecto implements Serializable {
     }
 
     public String getDataEdu() {
-        return DataProy;
+        return ImgProy;
     }
 
-    public void setDataProy(String DataProy) {
-        this.DataProy = DataProy;
+    public void setImgProy(String ImgProy) {
+        this.ImgProy = ImgProy;
     }
 
     public String getUrlProject() {
