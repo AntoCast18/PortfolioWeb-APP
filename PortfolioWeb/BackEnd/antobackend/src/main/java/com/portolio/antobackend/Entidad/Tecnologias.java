@@ -1,9 +1,8 @@
-package com.portolio.antobackend.Entidad;
 
+package com.portolio.antobackend.Entidad;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -13,24 +12,25 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-@Entity
-@NoArgsConstructor
+/**
+ *
+ * @author Antonella
+ */
+
 @Getter @Setter
-@Table(name = "experiencia")
-public class Experiencia implements Serializable {
+@Entity
+@Table(name = "tecnologia")
+public class Tecnologias implements Serializable{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String empresa;
-    private String cargo;
-    private String anio_ingreso;
-    private String anio_egreso;
+    private String lenguaje;
+    private String porcentaje;
     private String persona_id;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "persona_id", nullable = false, insertable = false, updatable = false)
@@ -38,14 +38,16 @@ public class Experiencia implements Serializable {
     @JsonIgnore
     private Persona persona;
 
-    
-    public Experiencia(Long id, String empresa, String cargo, String anio_ingreso, String anio_egreso, Persona persona, String persona_id) {
-        this.id = id;
-        this.empresa = empresa;
-        this.cargo = cargo;
-        this.anio_ingreso = anio_ingreso;
-        this.anio_egreso = anio_egreso;
-        this.persona = persona;
-        this.persona_id = persona_id;
+
+    public Tecnologias() {
     }
+
+    public Tecnologias(Long id, String lenguaje, String porcentaje, Persona persona) {
+        this.id = id;
+        this.lenguaje = lenguaje;
+        this.porcentaje = porcentaje;
+        this.persona = persona;
+    }
+    
+    
 }

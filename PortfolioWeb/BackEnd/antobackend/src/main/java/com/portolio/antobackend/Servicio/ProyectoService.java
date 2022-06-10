@@ -2,37 +2,41 @@
 package com.portolio.antobackend.Servicio;
 
 import com.portolio.antobackend.Entidad.Proyecto;
-import com.portolio.antobackend.Interfaces.ProyectoInterf;
 import com.portolio.antobackend.Repositorio.ProyectoRepo;
 import java.util.List;
+import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ProyectoService implements ProyectoInterf{
+@Transactional
+public class ProyectoService {
     
-    @Autowired ProyectoRepo proRepository;
+    @Autowired
+    ProyectoRepo proyectoRepository;
+
     
-    @Override
-    public List<Proyecto> getProyecto() {
-        List<Proyecto> proyecto = proRepository.findAll();
-        return proyecto;
+    public List<Proyecto> list(){
+        return proyectoRepository.findAll();
     }
 
-    @Override
-    public void saveProyecto(Proyecto proyecto) {
-        proRepository.save(proyecto);
+    
+    public Optional<Proyecto> getOne(Long id){
+        return proyectoRepository.findById(id);
     }
 
-    @Override
-    public void deleteProyecto(Long id) {
-        proRepository.deleteById(id);
-    }
+  
 
-    @Override
-    public Proyecto findProyecto(Long id) {
-        Proyecto proyecto = proRepository.findById(id).orElse(null);
-        return proyecto;
+    public void  save(Proyecto proyecto){
+        proyectoRepository.save(proyecto);
     }
     
+    public void delete(Long id){
+        proyectoRepository.deleteById(id);
+    }
+
+    public boolean existsById(Long id){
+        return proyectoRepository.existsById(id);
+    }
 }

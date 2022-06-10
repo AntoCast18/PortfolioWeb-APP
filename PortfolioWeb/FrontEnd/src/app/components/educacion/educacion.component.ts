@@ -1,6 +1,7 @@
+//import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { educacion } from 'src/app/model/educacion.model';
-import { EducacionService } from 'src/app/service/educacion.service';
+//import { Educacion } from 'src/app/model/educacion.model';
+//import { EducacionService } from 'src/app/service/educacion.service';
 
 @Component({
   selector: 'app-educacion',
@@ -8,12 +9,20 @@ import { EducacionService } from 'src/app/service/educacion.service';
   styleUrls: ['./educacion.component.css']
 })
 export class EducacionComponent implements OnInit {
-  educacion: educacion = new educacion("","","");
   
-  constructor(public educacionService: EducacionService) { }
+  //educacion:Educacion[] = [];
+  
+  constructor() { } //private educacionService: EducacionService
 
   ngOnInit(): void {
-    this.educacionService.getEducacion().subscribe(data => {this.educacion = data})
+   // this.getEducacion();
   }
 
+  public getEducacion():void{
+    //this.educacionService.getEducacion().subscribe(       data => {        this.educacion = data;       },       error => {
+      // console.log(error);       }     )   } }
+  //this.educacionService.getEducacion().subscribe({
+    //next:(Response: Educacion[]) => {       this.educacion=Response;       }, //error:(error:HttpErrorResponse)=>{
+       // alert(error.message);         }    })   }
+}
 }

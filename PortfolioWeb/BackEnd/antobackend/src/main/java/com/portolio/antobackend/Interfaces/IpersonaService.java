@@ -1,17 +1,24 @@
 
 package com.portolio.antobackend.Interfaces;
 
-import com.portolio.antobackend.Entidad.Persona;
-import java.util.List;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter @Setter
+public class IpersonaService {
+    
+  
+    private String nombre;
+    private String apellido;  
+    private String img;
 
-public interface IpersonaService {
-    //traer una lista de persosas
-    public List<Persona> getPersona();
-    //guardar un objeto de tipo persona
-    public void savePersona(Persona persona);
-    //Eliminar un usuario pero lo buscamos por ID
-    public void deletePersona(Long id);
-    //buscar una persona por id
-    public Persona findPersona(Long id);
+    public IpersonaService() {
+    }
+    
+    public IpersonaService(String nombre, String apellido, String img) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.img = img;
+    }
+    
 }

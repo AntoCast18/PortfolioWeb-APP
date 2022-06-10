@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { experiencia } from 'src/app/model/experiencia.model';
-import { ExperienciaService } from 'src/app/service/experiencia.service';
+//import { experiencia } from 'src/app/model/experiencia.model';
+//import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -8,12 +8,12 @@ import { ExperienciaService } from 'src/app/service/experiencia.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  experiencia: experiencia = new experiencia ("","","");
+  //experiencia: experiencia = new experiencia ("","","");
   
-  constructor(public experienciaService: ExperienciaService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.experienciaService.getExperiencia().subscribe(data => {this.experiencia = data})
+   // this.experienciaService.getExperiencia().subscribe(data => {this.experiencia = data})
   }
-
 }
+

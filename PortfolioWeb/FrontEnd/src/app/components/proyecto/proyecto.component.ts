@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { proyecto } from 'src/app/model/proyecto.model';
-import { ProyectoService } from 'src/app/service/proyecto.service';
+//import { proyecto } from 'src/app/model/proyecto.model';
+//import { ProyectoService } from 'src/app/service/proyecto.service';
 
 @Component({
   selector: 'app-proyecto',
@@ -8,12 +8,12 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
   styleUrls: ['./proyecto.component.css']
 })
 export class ProyectoComponent implements OnInit {
-  proyecto: proyecto = new proyecto ("","","");
+  //proyecto: proyecto = new proyecto ("","","");
   
-  constructor(public proyectoService: ProyectoService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.proyectoService.getproyecto().subscribe(data => {this.proyecto = data})
+    //this.proyectoService.getproyecto().subscribe(data => {this.proyecto = data})
   }
 
 }
