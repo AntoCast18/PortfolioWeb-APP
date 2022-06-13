@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+div.row{
+    margin-right:0px;
+}
+ 
+ div.container-fluid{
+    padding-right:0px;
+}
