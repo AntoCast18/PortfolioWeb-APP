@@ -1,8 +1,12 @@
-div{    
+div.row{    
     background-color: black;  
-    overflow-x: hidden;   
-    border-style: none;
+    margin-right: 0px;
 }  
+
+div.container-fluid{
+    background-color: black; 
+    padding-right: 0px;
+}
  
 app-social{
     float: right;
