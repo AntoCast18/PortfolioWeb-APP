@@ -7,9 +7,11 @@ h1{
     font-size: 75px;
 	text-align: center;
 }
-
-p{
-    color: azure;
+.card-header{
+    color:darkslateblue
+}
+.card-text{
+    color: #fcfc;
 }
 h3{
     font-size: large;
