@@ -1,11 +1,13 @@
-.row{
+.row {
     background-color: black;
     padding: 30px;
-    
+
 }
-.contenedor{
+
+.contenedor {
     width: auto;
 }
+
 .parte1,
 .parte2 {
     display: inline-block;
@@ -16,16 +18,18 @@
     box-shadow: 8px 8px 8px rgb(83, 82, 82);
     box-shadow: ejeX ejeY difumacion color;
 }
-h5{
-    color:  whitesmoke;
+
+h5 {
+    color: whitesmoke;
     font-size: 75px;
-	text-align:center;
+    text-align: center;
 }
 
-p{
+p {
     color: azure;
 }
-h3{
+
+h3 {
     font-size: large;
     color: #f9004d;
 }

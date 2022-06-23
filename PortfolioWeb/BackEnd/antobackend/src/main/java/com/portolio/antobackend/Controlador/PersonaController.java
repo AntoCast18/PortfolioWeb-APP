@@ -33,7 +33,7 @@ public class PersonaController {
     @GetMapping("/detail/{id}")
     public ResponseEntity<Persona> getById(@PathVariable("id") Long id){
         if(!personaService.existsById(id))
-            return new ResponseEntity(new Mensaje("No se encontro el resgitro"), HttpStatus.NOT_FOUND);
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
         Persona persona = personaService.getOne(id).get();
         return new ResponseEntity(persona, HttpStatus.OK);
     }
@@ -66,8 +66,13 @@ public class PersonaController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id")Long id){
         if(!personaService.existsById(id))
-            return new ResponseEntity(new Mensaje("No se encontro ningun registro de educacion"), HttpStatus.NOT_FOUND);
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
         personaService.delete(id);
         return new ResponseEntity(HttpStatus.OK);
+    }
+    
+    @GetMapping("/traer/perfil")
+    public Persona findPersona(){
+       return personaService.findPersona((long)1);
     }
 }

@@ -34,6 +34,10 @@ public class ImpPersonaService {
     public boolean existsById(Long id){
         return  ipersonaRepository.existsById(id);
     }
-    
+
+    public Persona findPersona(Long id) {
+        Persona persona = ipersonaRepository.findById(id).orElse(null);
+        return persona;
+        } 
     
 }
