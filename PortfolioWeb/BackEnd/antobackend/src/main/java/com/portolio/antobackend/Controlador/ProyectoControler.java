@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/persona/proyecto")
 public class ProyectoControler {
     
-     @Autowired
+    @Autowired
     ProyectoService proyectoService;
 
     @GetMapping("/lista")
@@ -48,7 +48,7 @@ public class ProyectoControler {
         proyecto.setPersona_id(proyectoDto.getPersona_id());   
         
         proyectoService.save(proyecto);
-        return new ResponseEntity(new Mensaje("El proyecto fue creado"), HttpStatus.OK);
+        return new ResponseEntity(HttpStatus.OK);
     }
      
      
@@ -61,7 +61,7 @@ public class ProyectoControler {
         proyecto.setDescripcion(proyectoDto.getDescripcion());
         proyecto.setEnlace(proyectoDto.getEnlace());                        
         proyectoService.save(proyecto);
-        return new ResponseEntity(new Mensaje("Registro de Proyecto Actualizado"), HttpStatus.OK);
+        return new ResponseEntity(HttpStatus.OK);
     }
   
   
@@ -69,9 +69,9 @@ public class ProyectoControler {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id")Long id){
         if(!proyectoService.existsById(id))
-            return new ResponseEntity(new Mensaje("No se encontro ningun registro de proyecto"), HttpStatus.NOT_FOUND);
+            return new ResponseEntity(HttpStatus.NOT_FOUND);
         proyectoService.delete(id);
-        return new ResponseEntity(new Mensaje("Proyecto eliminado"), HttpStatus.OK);
+        return new ResponseEntity( HttpStatus.OK);
     }
 
 

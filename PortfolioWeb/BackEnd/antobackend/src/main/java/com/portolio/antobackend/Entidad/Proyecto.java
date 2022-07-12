@@ -23,11 +23,11 @@ public class Proyecto implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-     private Long id;
+    private Long id;
     private String nombreproyecto;
     private String descripcion;
     private String enlace;
-   private String persona_id;
+    private String persona_id;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "persona_id", nullable = false, insertable = false, updatable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
